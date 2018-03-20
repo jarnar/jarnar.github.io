@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)https://jarnar.github.io/ -->
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <title>SmellBoy</title> 
+<script type='text/javascript'>
+      var _vds = _vds || [];
+      window._vds = _vds;
+      (function(){
+        _vds.push(['setAccountId', 'b588317292ec4c46']);
+        (function() {
+          var vds = document.createElement('script');
+          vds.type='text/javascript';
+          vds.async = true;
+          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(vds, s);
+        })();
+      })();
+  </script>
+  
+  <script type="text/javascript">
+	  window.zhuge = window.zhuge || [];
+	  window.zhuge.methods = "_init debug identify track trackLink trackForm page".split(" ");
+	  window.zhuge.factory = function(b) 
+	  {return function() 
+	  {var a = Array.prototype.slice.call(arguments);
+	   a.unshift(b);
+    window.zhuge.push(a);
+	   return window.zhuge;}};
+	  
+	  for (var i = 0; i < window.zhuge.methods.length; i++) {
+    var key = window.zhuge.methods[i];window.zhuge[key] = window.zhuge.factory(key);}
+	  window.zhuge.load = function(b, x) {
+    if (!document.getElementById("zhuge-js"))
+    {
+	    var a = document.createElement("script");
+	    var verDate = new Date();
+	    var verStr = verDate.getFullYear().toString()+ verDate.getMonth().toString() + verDate.getDate().toString();
+	    a.type = "text/javascript";
+	    a.id = "zhuge-js";
+	    a.async = !0;
+	    a.src = (
+	     location.protocol == 'http:' ? "http://sdk.zhugeio.com/zhuge.min.js?v=" : 'https://zgsdk.zhugeio.com/zhuge.min.js?v=') + verStr;
+    a.onerror = function(){
+	    window.zhuge.identify = window.zhuge.track = function(ename, props, callback)
+	    {if(callback && Object.prototype.toString.call(callback) === '[object Function]')callback();};};
+    var c = document.getElementsByTagName("script")[0];
+     c.parentNode.insertBefore(a, c);
+     window.zhuge._init(b, x)}};
+	  
+	  // window.zhuge.load('b1e144fc736e408b8715ac9b774e9ab6');//配置应用的AppKey
+	  window.zhuge.load('b1e144fc736e408b8715ac9b774e9ab6', {
+		  autoTrack: true, //全埋点开关
+		  singlePage: false, //是否为单页面应用 默认为false
+		  visualizer: true,  //可视化埋点开关
+		  debug:true
+	  });
+	  
+	  zhuge.track('购买商品'); //事件名称不能超过20个字符
+	  
+	  zhuge.track('购买商品', {
+		  '商品分类' : '手机',
+		  '商品名称' : 'iPhone7 64g',
+		  '数量' : 2
+	  });   //属性名称不能超过255个字符，属性值不能超过200个字符
+	  
+</script>
+	 
+ </head>
+ <body>
+  <a href="views/index.html">home</a>
+  <a href="http://elections.huffingtonpost.com/pollster/2016-general-election-trump-vs-clinton-vs-johnson">2016-general-election-trump-vs-clinton-vs-johnson</a>
+
+  <h1>2016-general-election-trump-vs-clinton-vs-johnson</h1> 
+  <script src="http://elections.huffingtonpost.com/pollster/2016-general-election-trump-vs-clinton-vs-johnson/embed.js"></script>
+  <canvas id="myCanvas" width="100px" height="30px"></canvas> 
+
+  <div>
+  <br />
+  <iframe frameborder="0" scrolling="no" height="450" width="420" allowtransparency="true" marginwidth="0" marginheight="0" src="http://tools.cn.forexprostools.com/profit-calculator/index.php?acc=12&pair=1"></iframe>
+  <iframe frameborder="0" scrolling="no" height="450" width="420" allowtransparency="true" marginwidth="0" marginheight="0" src="http://tools.cn.forexprostools.com/margin-calculator/index.php?acc=12&pair=1"></iframe>
+  </div>
+
+  <script>
+	var start = null;
+	drawstar = function() {
+		/*
+		ctx.moveTo(30, -30);
+		ctx.lineTo(100, 0);
+		ctx.lineTo(30, 30);
+		ctx.lineTo(0, 100);
+		ctx.lineTo( - 30, 30);
+		ctx.lineTo( - 100, 0);
+		ctx.lineTo( - 30, -30);
+		ctx.lineTo(0, -100);
+		ctx.lineTo(30, -30);*/
+		
+		/*
+		ctx.moveTo(0, -0);
+		ctx.lineTo(-0.230415,49.078341);
+		ctx.lineTo(97.465438,47.695853);
+		ctx.lineTo(-2.995392,-51.382488);
+		ctx.lineTo(-94.700461,-50.460829);
+		ctx.lineTo(-0.230415,-0.583090);
+		ctx.lineTo(-49.562682,0.000000);
+		ctx.lineTo(52.478134,-6.413994);
+		ctx.lineTo(50.145773,0.000000);
+		ctx.lineTo(-48.979592,0.000000);
+		*/
+		
+		/*
+		ctx.moveTo(0, -0);
+		ctx.lineTo(0.000000,0.000000);
+		ctx.lineTo(-0.230415,96.082949);
+		ctx.lineTo(1.152074,-0.230415);
+		ctx.lineTo(-1.612903,-97.465438);
+		ctx.lineTo(0.230415,1.749271);
+		ctx.lineTo(0.583090,95.043732);
+		ctx.lineTo(-2.915452,-99.125364);
+		ctx.lineTo(0.000000,0.000000);
+		*/
+		
+		/*
+		ctx.moveTo(0, -0);
+		ctx.lineTo(97.926267,98.387097);
+		ctx.lineTo(50.460829,50.921659);
+		ctx.lineTo(-50.460829,-49.539171);
+		ctx.lineTo(-99.308756,-97.926267);
+		ctx.lineTo(-98.387097,-50.460829);
+		ctx.lineTo(-49.078341,0.691244);
+		ctx.lineTo(0.000000,-51.311953);
+		ctx.lineTo(-47.813411,50.145773);
+		ctx.lineTo(49.562682,-1.166181);
+		ctx.lineTo(0.583090,50.145773);
+		ctx.lineTo(47.813411,-1.749271);
+		ctx.lineTo(-48.979592,-49.562682);
+		ctx.lineTo(1.749271,1.166181);
+		ctx.lineTo(50.460829,50.000000);
+		*/
+		
+		/*
+		ctx.moveTo(0, -0);
+		ctx.lineTo(50.000000,97.004608);
+		ctx.lineTo(1.152074,50.000000);
+		ctx.lineTo(0.691244,0.230415);
+		ctx.lineTo(-47.235023,-102.073733);
+		ctx.lineTo(-0.691244,-50.728863);
+		ctx.lineTo(97.376093,0.000000);
+		ctx.lineTo(-49.562682,-1.166181);
+		ctx.lineTo(0.000000,51.311953);
+		ctx.lineTo(-102.040816,1.749271);
+		*/
+		
+		/*
+		ctx.lineTo(97.926267,-52.304147);
+		ctx.lineTo(0.230415,97.926267);
+		ctx.lineTo(1.612903,-0.691244);
+		ctx.lineTo(44.930876,-99.308756);
+		ctx.lineTo(-1.152074,0.583090);
+		ctx.lineTo(94.460641,-3.498542);
+		ctx.lineTo(-2.915452,-0.583090);
+		ctx.lineTo(-4.081633,-97.959184);
+		ctx.lineTo(-97.959184,2.332362);
+		*/
+		
+		
+		ctx.moveTo(0, 10);
+		ctx.lineTo(0.230415,9.907834);
+		ctx.lineTo(21.428571,38.940092);
+		ctx.lineTo(96.543779,51.382488);
+		ctx.lineTo(38.018433,27.419355);
+		ctx.lineTo(12.211982,2.073733);
+		ctx.lineTo(-18.663594,-26.036866);
+		ctx.lineTo(-39.861751,-60.599078);
+		ctx.lineTo(-89.170507,-95.161290);
+		ctx.lineTo(-70.276498,-44.009217);
+		ctx.lineTo(-34.792627,-23.271889);
+		ctx.lineTo(-17.281106,-8.064516);
+		ctx.lineTo(-1.612903,-0.230415);
+		ctx.lineTo(96.209913,50.728863);
+		ctx.lineTo(25.655977,13.994169);
+		ctx.lineTo(1.166181,-12.827988);
+		ctx.lineTo(-34.402332,-54.810496);
+		ctx.lineTo(-88.629738,-98.542274);
+		ctx.lineTo(-84.548105,-50.728863);
+		ctx.lineTo(-25.655977,-20.408163);
+		ctx.lineTo(-6.997085,0.000000);
+		ctx.lineTo(4.664723,12.827988);
+		ctx.lineTo(29.154519,48.979592);
+		ctx.lineTo(62.973761,78.134111);
+		ctx.lineTo(95.626822,96.209913);
+		
+		/*
+		ctx.moveTo(100,-100);
+		ctx.lineTo(-98.847926,-0.230415);
+		ctx.lineTo(97.004608,-95.622120);
+		ctx.lineTo(-2.534562,-48.979592);
+		ctx.lineTo(95.626822,-47.813411);
+		ctx.lineTo(-49.562682,96.793003);*/
+		/*
+				ctx.lineTo(0.277971,48.783878);
+		ctx.lineTo(0.277971,-49.339819);
+		ctx.lineTo(0.138985,97.919217);
+		ctx.lineTo(2.692778,-98.408813);
+		ctx.lineTo(4.406365,97.429621);*/
+		
+	}
+	var c = document.getElementById("myCanvas");
+	c.width = 1800;
+	c.height = 90;
+	var ctx = c.getContext("2d");
+	//ctx.strokeStyle = 'rgba(231,42,42,0.5)';
+	//ctx.strokeStyle = 'rgba(138,43,226,0.5)';
+	var	a = Math.random();
+		a = Math.floor(a*100);
+	var	b = Math.random();
+		b = Math.floor(b*100);
+		ctx.strokeStyle = 'rgba('+(255-a)+', '+(255-b)+', '+(100+b)+', 0.5)';
+	function step(timestamp) {
+		if (!start) start = timestamp;
+		var progress = (timestamp - start) / 100.0;
+		ctx.clearRect(0, 0, c.width, c.height);
+		//drawing
+		ctx.save();
+		ctx.beginPath();
+		for (i = 0; i < 199; i++) {
+			ctx.setTransform(1, 0, 0, 1, 0, 0);
+			var yoff = 0.25 * c.height * Math.cos(progress / 14 + i / 16);
+			ctx.translate( - 100 + 14 * i, c.height / 2 + yoff);
+			ctx.rotate(2 + progress / 30 + 0.1 * Math.sin(i / 20 + progress / 10.0));
+			var scaleX = 1 + 0.8 * Math.sin(i / 8);
+			var scaleY = 1 + 0.8 * Math.sin((i + progress) / 50);
+			var t = i / 100.0;
+			ctx.scale(scaleX, scaleY);
+			drawstar();
+		}
+		ctx.restore();
+		ctx.stroke();
+		window.requestAnimationFrame(step);
+	}
+	window.requestAnimationFrame(step);
+	
+</script> 
+  <title>2048 Game - SmellBoy</title> 
+  <link href="./main.css" rel="stylesheet" type="text/css" /> 
+  <link href="./flag-icon.css" rel="stylesheet" type="text/css" /> 
+  <style>
+  .score-container:after {
+    content: "Score";
+  }
+  .best-container:after {
+    content: "Best";
+  }
+</style> 
+  <meta property="og:image" content="/meta/apple-touch-icon.png" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="HandheldFriendly" content="True" /> 
+  <meta name="MobileOptimized" content="320" /> 
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui" />   
+  <div class="mobile-top"></div> 
+  <div class="container"> 
+   <div class="heading"> 
+    <h1 class="title"><a href="https://smellboy.github.io/">2048</a></h1> 
+    <div class="scores-container"> 
+     <div class="score-container">
+       2020 
+      <div class="score-addition">
+        +4 
+      </div> 
+     </div> 
+     <div class="best-container">
+       18004 
+     </div> 
+    </div> 
+   </div> 
+   <div class="game-intro"> 
+	   
+    <a class="restart-button">New Game</a> 
+    <h2 class="subtitle">Play <strong>2048 Game</strong> Online</h2> 
+    <div class="above-game"> 
+     <p>通过上下左右控制格子移动</p> 
+     <p><strong>先定一个小目标比如说2048!</strong></p> 
+    </div> 
+   </div> 
+   <div class="game-container"> 
+    <div class="game-message"> 
+     <p></p> 
+     <div class="lower"> 
+      <a class="keep-playing-button">Keep playing</a> 
+      <a class="retry-button">Try again</a> 
+      <div class="score-sharing"> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="grid-container"> 
+     <div class="grid-row"> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+     </div> 
+     <div class="grid-row"> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+     </div> 
+     <div class="grid-row"> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+     </div> 
+     <div class="grid-row"> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+      <div class="grid-cell"></div> 
+     </div> 
+    </div> 
+    <div class="tile-container"> 
+     <div class="tile tile-2 tile-position-1-1 tile-new"> 
+      <div class="tile-inner">
+        2 
+      </div> 
+     </div> 
+     <div class="tile tile-2 tile-position-1-2"> 
+      <div class="tile-inner">
+        2 
+      </div> 
+     </div> 
+     <div class="tile tile-2 tile-position-1-2"> 
+      <div class="tile-inner">
+        2 
+      </div> 
+     </div> 
+     <div class="tile tile-4 tile-position-1-2 tile-merged"> 
+      <div class="tile-inner">
+        4 
+      </div> 
+     </div> 
+     <div class="tile tile-2 tile-position-1-3"> 
+      <div class="tile-inner">
+        2 
+      </div> 
+     </div> 
+     <div class="tile tile-16 tile-position-1-4"> 
+      <div class="tile-inner">
+        16 
+      </div> 
+     </div> 
+     <div class="tile tile-8 tile-position-2-2"> 
+      <div class="tile-inner">
+        8 
+      </div> 
+     </div> 
+     <div class="tile tile-4 tile-position-2-3"> 
+      <div class="tile-inner">
+        4 
+      </div> 
+     </div> 
+     <div class="tile tile-256 tile-position-2-4"> 
+      <div class="tile-inner">
+        256 
+      </div> 
+     </div> 
+     <div class="tile tile-16 tile-position-3-3"> 
+      <div class="tile-inner">
+        16 
+      </div> 
+     </div> 
+     <div class="tile tile-32 tile-position-3-4"> 
+      <div class="tile-inner">
+        32 
+      </div> 
+     </div> 
+     <div class="tile tile-8 tile-position-4-3"> 
+      <div class="tile-inner">
+        8 
+      </div> 
+     </div> 
+     <div class="tile tile-2 tile-position-4-4"> 
+      <div class="tile-inner">
+        2 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <script src="./all.js"></script> 
+   <br /> 
+  </div> 
+  <div style="width:50%; margin:0 auto; text-align:center;"> 
+   <p><strong>点击图片关注微信公众号</strong></p> 
+   <img src="weixin.jpg" style="max-width:50%;overflow:hidden;" /> 
+  </div> 
+  <br /> 
+  <br /> 
+  <div style="width:300px; margin:0 auto; text-align:center;"> 
+   <p><strong>1：金融实时行情</strong></p> 
+   <a style="color:gold;" href="http://finance.sina.com.cn/futures/quotes/XAU.shtml">伦敦金 XAUUSD</a> 
+   <p> <a style="color:gold;" href="http://finance.sina.com.cn/futures/quotes/CL.shtml">美原油 NYMEX</a> </p> 
+  </div> 
+  <br /> 
+  <br /> 
+  <div style="width:300px; margin:0 auto; text-align:center;"> 
+   <p><strong>3：数据咨询行情</strong></p> 
+   <a style="color:gold;" href="https://psy-data.github.io/">大数据发布 psy-data</a> 
+   <p> <a style="color:gold;" href="http://brucezhaor.github.io/">数据大神 brucezhaor</a> </p> 
+   <p> <a style="color:gold;" href="heart_rate.html">心率波形 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="wheel.html">转速视觉 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="web_crawler.html">贴吧爬虫 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="charts_reports.html">统计报表 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="动态展示.html">动态展示 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly01.html">weekly01 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly02.html">weekly02 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly03.html">weekly03 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly04.html">weekly04 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly05.html">weekly05 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly06.html">weekly06 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly07.html">weekly07 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly08.html">weekly08 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly09.html">weekly09 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly10.html">weekly10 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly11.html">weekly11 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly12.html">weekly12 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly13.html">weekly13 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly14.html">weekly14 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly15.html">weekly15 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly16.html">weekly16 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly17.html">weekly17 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly18.html">weekly18 jarnar</a> </p> 
+   <p> <a style="color:gold;" href="/weekly070424/weekly19.html">weekly19 jarnar</a> </p> 
+  </div> 
+  <br /> 
+  <div style="width:300px; margin:0 auto; text-align:center;"> 
+   <p><strong>4：拓展阅读</strong></p> 
+   <a style="color:gold;" href="https://zhuanlan.zhihu.com/p/21816110">【量化心得】</a> 
+   <section class="entry-content ng-binding ng-scope" ng-bind-html="postContentTrustedHtml" ui-copyright-check="" data-entry-url="/p/21816110" data-author-name="江南" ng-if="ownPost(post) || !isCensoring">
+    <p> 此开卷第一回也，下回不知有没有，这回是有的。</p>
+    <h2> 1 打三日鱼晒两天网，欲速则不达​。</h2>
+    <p>​ 鱼要长大，网要休息。在时间上，晒网的时间要长于打鱼的时间。如果打鱼周期是三天，第一天打鱼，接下来两天晒网。</p>
+    <p> 不要担心休息的时间长，会错失很多机会。往往机会并不是越多越好，而是准备得越充分越好。万事俱备只欠东风，这个东风就是时机。真真的机会，不是随便吹的东西南北风。<br /></p>
+    <h2> 2 做低频交易，稳定容易把握。</h2>
+    <p> 风险控制不到位的情况下，交易频率越高，失误也就越多。无风也有三尺浪，市场上充满着噪声。需要我们练就身处闹市，心在老林的心态去面对市场的熙熙攘攘。</p>
+    <p> 对于低频交易有天然的优势，那就是 低成本 低风险。低频捕鱼，鱼可以尽情的长大。长线钓鱼，鱼可以尽情地游。海阔凭鱼跃，天高任鸟飞。​</p>
+    <p>2016-08-01​</p>
+   </section> 
+  </div> 
+  <div class="fb-line"> 
+   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> 
+   <div class="twitter-button-wrapper"> 
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20one%20of%20the%20most%20addictive%20games%20of%20all%20time%20-%202048!" target="_blank" data-size="default"> Tweet</a> 
+   </div> 
+   <a target="_blank" class="facebook-share-button" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//2048game.com">Facebook</a> 
+   <div class="clear"></div> 
+  </div>  
+ </body>
+</html>
