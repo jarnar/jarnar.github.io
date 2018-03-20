@@ -4,257 +4,19 @@
   
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- <link rel="fluid-icon" href="https://raw.githubusercontent.com/jarnar/jarnar.github.io/master/smart_app_head.png"> -->
-    <!-- <link rel="shortcut icon" href="./resources/images/dataworks.png"> -->
     <link rel="shortcut icon" href="/smart_app_head_favicon.ico" />
     <title>小数据顾问</title>
     <script crossorigin type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+     
+    <style type="text/css">#myCanvas { width: 100%; height:90px; }</style>
 
-    <script type="text/javascript">
-      var _vds = _vds || [];
-      window._vds = _vds; (function() {
-        _vds.push(['setAccountId', 'b588317292ec4c46']); (function() {
-          var vds = document.createElement('script');
-          vds.type = 'text/javascript';
-          vds.async = true;
-          vds.src = ('https:' == document.location.protocol ? 'https://': 'http://') + 'dn-growing.qbox.me/vds.js';
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(vds, s);
-        })();
-      })();</script>
-    <script type="text/javascript"> 
-      wx.onMenuShareTimeline({
-      title: '小数据顾问', // 分享标题
-      link: 'https://jarnar.github.io/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: 'https://jarnar.github.io/smart_app.jpg', // 分享图标
-      success: function () {
-      // 用户确认分享后执行的回调函数
-      };
-      cancel: function () {
-      // 用户取消分享后执行的回调函数
-      }
-      });
-      wx.onMenuShareAppMessage({
-      title: '小数据顾问', // 分享标题
-      desc: '记录生活，记录努力，给自己打分。', // 分享描述
-      link: 'https://jarnar.github.io/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: 'https://jarnar.github.io/smart_app.jpg', // 分享图标
-      type: '', // 分享类型,music、video或link，不填默认为link
-      dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-      success: function () {
-      // 用户确认分享后执行的回调函数
-      },
-      cancel: function () {
-      // 用户取消分享后执行的回调函数
-      }
-      });
-
-      var imgUrl = "https://jarnar.github.io/smart_app.jpg";  //注意必须是绝对路径
-      var lineLink = "https://jarnar.github.io/";   //同样，必须是绝对路径
-      var descContent = '记录生活，记录努力，给自己打分。'; //分享给朋友或朋友圈时的文字简介
-      var shareTitle = '小数据顾问';  //分享title
-      var appid = ''; //apiID，可留空
-      function shareFriend() {  WeixinJSBridge.invoke('sendAppMessage', {
-          "appid": appid,
-          "img_url": imgUrl,
-          "img_width": "200",
-          "img_height": "200",
-          "link": lineLink,
-          "desc": descContent,
-          "title": shareTitle  
-        },
-        function(res) {
-          //_report('send_msg', res.err_msg);
-            
-        })
-      }
-      function shareTimeline() {  WeixinJSBridge.invoke('shareTimeline', {
-          "img_url": imgUrl,
-          "img_width": "200",
-          "img_height": "200",
-          "link": lineLink,
-          "desc": descContent,
-          "title": shareTitle  
-        },
-        function(res) {  //_report('timeline', res.err_msg);
-            
-        });
-      }
-      function shareWeibo() {  WeixinJSBridge.invoke('shareWeibo', {
-          "content": descContent,
-          "url": lineLink,
-            
-        },
-        function(res) {
-          //_report('weibo', res.err_msg);
-            
-        });
-      }
-      // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
-      document.addEventListener('WeixinJSBridgeReady',
-      function onBridgeReady() {   // 发送给好友
-          WeixinJSBridge.on('menu:share:appmessage',
-        function(argv) {
-          shareFriend();  
-        });   // 分享到朋友圈
-          WeixinJSBridge.on('menu:share:timeline',
-        function(argv) {
-          shareTimeline();  
-        });   // 分享到微博
-          WeixinJSBridge.on('menu:share:weibo',
-        function(argv) {
-          shareWeibo();  
-        });
-      },
-      false); < br / ></script>
-    <script type="text/javascript">window.zhuge = window.zhuge || [];
-      window.zhuge.methods = "_init debug identify track trackLink trackForm page".split(" ");
-      window.zhuge.factory = function(b) {
-        return function() {
-          var a = Array.prototype.slice.call(arguments);
-          a.unshift(b);
-          window.zhuge.push(a);
-          return window.zhuge;
-        }
-      };
-
-      for (var i = 0; i < window.zhuge.methods.length; i++) {
-        var key = window.zhuge.methods[i];
-        window.zhuge[key] = window.zhuge.factory(key);
-      }
-      window.zhuge.load = function(b, x) {
-        if (!document.getElementById("zhuge-js")) {
-          var a = document.createElement("script");
-          var verDate = new Date();
-          var verStr = verDate.getFullYear().toString() + verDate.getMonth().toString() + verDate.getDate().toString();
-          a.type = "text/javascript";
-          a.id = "zhuge-js";
-          a.async = !0;
-          a.src = (location.protocol == 'http:' ? "http://sdk.zhugeio.com/zhuge.min.js?v=": 'https://zgsdk.zhugeio.com/zhuge.min.js?v=') + verStr;
-          a.onerror = function() {
-            window.zhuge.identify = window.zhuge.track = function(ename, props, callback) {
-              if (callback && Object.prototype.toString.call(callback) === '[object Function]') callback();
-            };
-          };
-          var c = document.getElementsByTagName("script")[0];
-          c.parentNode.insertBefore(a, c);
-          window.zhuge._init(b, x)
-        }
-      };
-
-      // window.zhuge.load('b1e144fc736e408b8715ac9b774e9ab6');//配置应用的AppKey
-      window.zhuge.load('b1e144fc736e408b8715ac9b774e9ab6', {
-        autoTrack: true,
-        //全埋点开关
-        singlePage: false,
-        //是否为单页面应用 默认为false
-        visualizer: true,
-        //可视化埋点开关
-        debug: true
-      });
-
-      zhuge.track('购买商品'); //事件名称不能超过20个字符
-      zhuge.track('购买商品', {
-        '商品分类': '手机',
-        '商品名称': 'iPhone7 64g',
-        '数量': 2
-      }); //属性名称不能超过255个字符，属性值不能超过200个字符
-      </script>
-    <style type="text/css">#myCanvas { width: 100%; height:90px; }</style></head>
-  
+  </head>
   <body>
     <a href="views/index.html">home</a>
     <canvas id="myCanvas"></canvas>
-    <!-- <div>
-    <br />
-    <iframe frameborder="0" scrolling="no" height="450" width="420" 
-    allowtransparency="true" marginwidth="0" marginheight="0" 
-    src="http://tools.cn.forexprostools.com/profit-calculator/index.php?acc=12&pair=1"></iframe>
-    <iframe frameborder="0" scrolling="no" height="450" width="420" allowtransparency="true"
-    marginwidth="0" marginheight="0" 
-    src="http://tools.cn.forexprostools.com/margin-calculator/index.php?acc=12&pair=1"></iframe>
-    </div> -->
     <script>var start = null;
       drawstar = function() {
-        /*
-    ctx.moveTo(30, -30);
-    ctx.lineTo(100, 0);
-    ctx.lineTo(30, 30);
-    ctx.lineTo(0, 100);
-    ctx.lineTo( - 30, 30);
-    ctx.lineTo( - 100, 0);
-    ctx.lineTo( - 30, -30);
-    ctx.lineTo(0, -100);
-    ctx.lineTo(30, -30);*/
-
-        /*
-    ctx.moveTo(0, -0);
-    ctx.lineTo(-0.230415,49.078341);
-    ctx.lineTo(97.465438,47.695853);
-    ctx.lineTo(-2.995392,-51.382488);
-    ctx.lineTo(-94.700461,-50.460829);
-    ctx.lineTo(-0.230415,-0.583090);
-    ctx.lineTo(-49.562682,0.000000);
-    ctx.lineTo(52.478134,-6.413994);
-    ctx.lineTo(50.145773,0.000000);
-    ctx.lineTo(-48.979592,0.000000);
-    */
-
-        /*
-    ctx.moveTo(0, -0);
-    ctx.lineTo(0.000000,0.000000);
-    ctx.lineTo(-0.230415,96.082949);
-    ctx.lineTo(1.152074,-0.230415);
-    ctx.lineTo(-1.612903,-97.465438);
-    ctx.lineTo(0.230415,1.749271);
-    ctx.lineTo(0.583090,95.043732);
-    ctx.lineTo(-2.915452,-99.125364);
-    ctx.lineTo(0.000000,0.000000);
-    */
-
-        /*
-    ctx.moveTo(0, -0);
-    ctx.lineTo(97.926267,98.387097);
-    ctx.lineTo(50.460829,50.921659);
-    ctx.lineTo(-50.460829,-49.539171);
-    ctx.lineTo(-99.308756,-97.926267);
-    ctx.lineTo(-98.387097,-50.460829);
-    ctx.lineTo(-49.078341,0.691244);
-    ctx.lineTo(0.000000,-51.311953);
-    ctx.lineTo(-47.813411,50.145773);
-    ctx.lineTo(49.562682,-1.166181);
-    ctx.lineTo(0.583090,50.145773);
-    ctx.lineTo(47.813411,-1.749271);
-    ctx.lineTo(-48.979592,-49.562682);
-    ctx.lineTo(1.749271,1.166181);
-    ctx.lineTo(50.460829,50.000000);
-    */
-
-        /*
-    ctx.moveTo(0, -0);
-    ctx.lineTo(50.000000,97.004608);
-    ctx.lineTo(1.152074,50.000000);
-    ctx.lineTo(0.691244,0.230415);
-    ctx.lineTo(-47.235023,-102.073733);
-    ctx.lineTo(-0.691244,-50.728863);
-    ctx.lineTo(97.376093,0.000000);
-    ctx.lineTo(-49.562682,-1.166181);
-    ctx.lineTo(0.000000,51.311953);
-    ctx.lineTo(-102.040816,1.749271);
-    */
-
-        /*
-    ctx.lineTo(97.926267,-52.304147);
-    ctx.lineTo(0.230415,97.926267);
-    ctx.lineTo(1.612903,-0.691244);
-    ctx.lineTo(44.930876,-99.308756);
-    ctx.lineTo(-1.152074,0.583090);
-    ctx.lineTo(94.460641,-3.498542);
-    ctx.lineTo(-2.915452,-0.583090);
-    ctx.lineTo(-4.081633,-97.959184);
-    ctx.lineTo(-97.959184,2.332362);
-    */
-
         ctx.moveTo(0, 10);
         ctx.lineTo(0.230415, 9.907834);
         ctx.lineTo(21.428571, 38.940092);
@@ -280,28 +42,11 @@
         ctx.lineTo(29.154519, 48.979592);
         ctx.lineTo(62.973761, 78.134111);
         ctx.lineTo(95.626822, 96.209913);
-
-        /*
-    ctx.moveTo(100,-100);
-    ctx.lineTo(-98.847926,-0.230415);
-    ctx.lineTo(97.004608,-95.622120);
-    ctx.lineTo(-2.534562,-48.979592);
-    ctx.lineTo(95.626822,-47.813411);
-    ctx.lineTo(-49.562682,96.793003);*/
-        /*
-        ctx.lineTo(0.277971,48.783878);
-    ctx.lineTo(0.277971,-49.339819);
-    ctx.lineTo(0.138985,97.919217);
-    ctx.lineTo(2.692778,-98.408813);
-    ctx.lineTo(4.406365,97.429621);*/
-
       }
       var c = document.getElementById("myCanvas");
       c.width = 750;
       c.height = 90;
       var ctx = c.getContext("2d");
-      //ctx.strokeStyle = 'rgba(231,42,42,0.5)';
-      //ctx.strokeStyle = 'rgba(138,43,226,0.5)';
       var a = Math.random();
       a = Math.floor(a * 100);
       var b = Math.random();
@@ -440,13 +185,7 @@
       <img src="vote.png" style="max-width:50%;overflow:hidden;" /></div>
     <br />
     <br />
-    <div style="width:300px; margin:0 auto; text-align:center;">
-      <p>
-        <strong>1：金融实时行情</strong></p>
-      <a style="color:gold;" href="http://finance.sina.com.cn/futures/quotes/XAU.shtml">伦敦金 XAUUSD</a>
-      <p>
-        <a style="color:gold;" href="http://finance.sina.com.cn/futures/quotes/CL.shtml">美原油 NYMEX</a></p>
-    </div>
+
     <br />
     <br />
     <div style="width:300px; margin:0 auto; text-align:center;">
@@ -465,44 +204,6 @@
         <a style="color:gold;" href="charts_reports.html">统计报表 jarnar</a></p>
       <p>
         <a style="color:gold;" href="动态展示.html">动态展示 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly01.html">weekly01 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly02.html">weekly02 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly03.html">weekly03 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly04.html">weekly04 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly05.html">weekly05 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly06.html">weekly06 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly07.html">weekly07 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly08.html">weekly08 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly09.html">weekly09 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly10.html">weekly10 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly11.html">weekly11 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly12.html">weekly12 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly13.html">weekly13 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly14.html">weekly14 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly15.html">weekly15 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly16.html">weekly16 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly17.html">weekly17 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly18.html">weekly18 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="/weekly070424/weekly19.html">weekly19 jarnar</a></p>
     </div>
     <br />
     <div style="width:300px; margin:0 auto; text-align:center;">
