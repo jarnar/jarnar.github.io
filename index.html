@@ -6,26 +6,154 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" href="/smart_app_head_favicon.ico" />
     <title>小数据顾问-实验室</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script crossorigin type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-    <style type="text/css">#myCanvas { width: 100%; height:90px; }</style></head>
   
+    <script src="js/Chart.js"></script>
+
+    <!-- <img src="http://pic172.nipic.com/file/20180717/20020614_091834556035_2.jpg" style="max-width:100%;overflow:hidden;" /> -->
+    <!-- <img src="http://pic168.nipic.com/file/20180607/8952533_190225680000_2.jpg"  -->
+<style>
+body {
+  background-color: #f3f5f7;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  /*top: 50%;*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+  height: 375px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card .about {
+  height: 225px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card .about h3,
+.card .about .lead {
+  font-weight: 300;
+  margin: 0;
+}
+
+.card .about h3 {
+  font-size: 24px;
+}
+
+.card .about .lead {
+  color: #aaa;
+}
+
+.card .info {
+  float: left;
+  padding: 10px 30px 10px 0;
+}
+
+.card .info p {
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 300;
+}
+
+.legends {
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.legend {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.legend--this {
+  background-color: #5555FF;
+}
+
+.legend--prev {
+  background-color: #FF55B8;
+}
+
+.axis {
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+  text-transform: uppercase;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+}
+
+.axis .tick {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.2;
+  font-size: 11px;
+  text-align: center;
+  line-height: 40px;
+  padding-top: 150px;
+}
+
+.axis .tick:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.axis .tick .value {
+  transform: translateY(-40px);
+  transition: 0.3s transform;
+  position: absolute;
+  top: 20px;
+  color: #444;
+  border-radius: 2px;
+  width: 100%;
+  line-height: 20px;
+}
+
+.axis .tick:hover .value.value--this {
+  transform: translateY(0);
+  display: block;
+}
+
+.value.value--this {
+  color: #5555FF;
+  font-weight: bold;
+}
+
+</style>
+
   <body>
+    <p/>
     <div class="container">
       <div class="row clearfix">
         <div class="col-md-12 column">
           <ul class="nav nav-pills">
             <li class="active">
               <a href="#">
-                <span class="badge pull-right">42</span>Home</a></li>
+                <span class="badge pull-right">0</span>Home</a></li>
             <li>
               <a href="#">
-                <span class="badge pull-right">16</span>More</a></li>
+                <span class="badge pull-right">0</span>More</a></li>
           </ul>
+
+
+          
+          <p/>
+
+
           <div class="carousel slide" id="carousel-111189">
             <ol class="carousel-indicators">
               <li data-slide-to="0" data-target="#carousel-111189"></li>
@@ -62,6 +190,9 @@
               <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
           </div>
+
+          <p/>
+
           <div class="row clearfix">
             <div class="col-md-8 column">
               <div class="row">
@@ -69,6 +200,7 @@
                   <div class="thumbnail">
                     <img alt="300x200" src="v3/default4.jpg" />
                     <div class="caption">
+
                       <h3>Thumbnail label</h3>
                       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                       <p>
@@ -103,21 +235,23 @@
                 </div>
               </div>
             </div>
+
+
             <div class="col-md-4 column">
               <table class="table">
                 <thead>
                   <tr>
                     <th>编号</th>
-                    <th>产品</th>
-                    <th>交付时间</th>
-                    <th>状态</th></tr>
+                    <th>训练表现</th>
+                    <th>截止时间</th>
+                    <th>测试表现</th></tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>TB - Monthly</td>
-                    <td>01/04/2012</td>
-                    <td>Default</td></tr>
+                    <td>train_154</td>
+                    <td>2018/07/18</td>
+                    <td>165%</td></tr>
                   <tr class="success">
                     <td>1</td>
                     <td>TB - Monthly</td>
@@ -145,6 +279,163 @@
         </div>
       </div>
     </div>
+          
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+<div class="card">
+  <!-- Custom information -->
+  <div class="about">
+    <h3>稳健决策系统</h3>
+    <p class="lead">神经网络+蒙特卡洛树搜索</p>
+    <div class="legends">
+      <div class="info">
+        <span class="legend legend--this"></span>
+        <p>今年</p>
+      </div>
+      <div class="info">
+        <span class="legend legend--prev"></span>
+        <p>去年</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Canvas for Chart.js -->
+  <canvas id="canvas"></canvas>
+  
+  <!-- Custom Axis -->
+  <div class="axis">
+    <div class="tick">
+      MON
+      <span class="value value--this">24</span>
+      <span class="value value--prev">20</span>
+    </div>
+    <div class="tick">
+      TUE
+      <span class="value value--this">18</span>
+      <span class="value value--prev">22</span>
+    </div>
+    <div class="tick">
+      WED
+      <span class="value value--this">16</span>
+      <span class="value value--prev">30</span>
+    </div>
+    <div class="tick">
+      THU
+      <span class="value value--this">18</span>
+      <span class="value value--prev">22</span>
+    </div>
+    <div class="tick">
+      FRI
+      <span class="value value--this">24</span>
+      <span class="value value--prev">18</span>
+    </div>
+    <div class="tick">
+      SAT
+      <span class="value value--this">36</span>
+      <span class="value value--prev">22</span>
+    </div>
+    <div class="tick">
+      SUN
+      <span class="value value--this">28</span>
+      <span class="value value--prev">30</span>
+    </div>
+  </div>
+</div>
+
+    <br/>
+    <br/>
+
+<script type="text/javascript">
+var canvas = document.getElementById("canvas");
+
+// Apply multiply blend when drawing datasets
+var multiply = {
+  beforeDatasetsDraw: function(chart, options, el) {
+    chart.ctx.globalCompositeOperation = 'multiply';
+  },
+  afterDatasetsDraw: function(chart, options) {
+    chart.ctx.globalCompositeOperation = 'source-over';
+  },
+};
+
+// Gradient color - this week
+var gradientThisWeek = canvas.getContext('2d').createLinearGradient(0, 0, 0, 550);
+gradientThisWeek.addColorStop(0, '#5555FF');
+gradientThisWeek.addColorStop(1, '#9787FF');
+
+// Gradient color - previous week
+var gradientPrevWeek = canvas.getContext('2d').createLinearGradient(0, 0, 0, 550);
+gradientPrevWeek.addColorStop(0, '#FF55B8');
+gradientPrevWeek.addColorStop(1, '#FF8787');
+
+
+var config = {
+    type: 'line',
+    data: {
+        labels: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
+        datasets: [
+          {
+              label: 'This week',
+              data: [24, 18, 16, 18, 24, 36, 28],
+              backgroundColor: gradientThisWeek,
+              borderColor: 'transparent',
+              pointBackgroundColor: '#FFFFFF',
+              pointBorderColor: '#FFFFFF',
+              lineTension: 0.40,
+          },
+          {
+              label: 'Previous week',
+              data: [20, 22, 30, 22, 18, 22, 30],
+              backgroundColor: gradientPrevWeek,
+              borderColor: 'transparent',
+              pointBackgroundColor: '#FFFFFF',
+              pointBorderColor: '#FFFFFF',
+              lineTension: 0.40,
+          }
+        ]
+    },
+    options: {
+        elements: { 
+          point: {
+            radius: 0,
+            hitRadius: 5, 
+            hoverRadius: 5 
+          } 
+        },
+        legend: {
+            display: false,
+        },
+        scales: {
+            xAxes: [{
+                display: false,
+            }],
+            yAxes: [{
+                display: false,
+                ticks: {
+                  beginAtZero: true,
+                },
+            }]
+        }
+    },
+    plugins: [multiply],
+};
+
+window.chart = new Chart(canvas, config);
+</script>
+
+
   </body>
 
 </html>
