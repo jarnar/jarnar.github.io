@@ -14,231 +14,161 @@
   </head>
   <body>
     <a href="views/index.html">home</a>
-    <canvas id="myCanvas"></canvas>
-    <script>var start = null;
-      drawstar = function() {
-        ctx.moveTo(0, 10);
-        ctx.lineTo(0.230415, 9.907834);
-        ctx.lineTo(21.428571, 38.940092);
-        ctx.lineTo(96.543779, 51.382488);
-        ctx.lineTo(38.018433, 27.419355);
-        ctx.lineTo(12.211982, 2.073733);
-        ctx.lineTo( - 18.663594, -26.036866);
-        ctx.lineTo( - 39.861751, -60.599078);
-        ctx.lineTo( - 89.170507, -95.161290);
-        ctx.lineTo( - 70.276498, -44.009217);
-        ctx.lineTo( - 34.792627, -23.271889);
-        ctx.lineTo( - 17.281106, -8.064516);
-        ctx.lineTo( - 1.612903, -0.230415);
-        ctx.lineTo(96.209913, 50.728863);
-        ctx.lineTo(25.655977, 13.994169);
-        ctx.lineTo(1.166181, -12.827988);
-        ctx.lineTo( - 34.402332, -54.810496);
-        ctx.lineTo( - 88.629738, -98.542274);
-        ctx.lineTo( - 84.548105, -50.728863);
-        ctx.lineTo( - 25.655977, -20.408163);
-        ctx.lineTo( - 6.997085, 0.000000);
-        ctx.lineTo(4.664723, 12.827988);
-        ctx.lineTo(29.154519, 48.979592);
-        ctx.lineTo(62.973761, 78.134111);
-        ctx.lineTo(95.626822, 96.209913);
-      }
-      var c = document.getElementById("myCanvas");
-      c.width = 750;
-      c.height = 90;
-      var ctx = c.getContext("2d");
-      var a = Math.random();
-      a = Math.floor(a * 100);
-      var b = Math.random();
-      b = Math.floor(b * 100);
-      ctx.strokeStyle = 'rgba(' + (255 - a) + ', ' + (255 - b) + ', ' + (100 + b) + ', 0.5)';
-      function step(timestamp) {
-        if (!start) start = timestamp;
-        var progress = (timestamp - start) / 100.0;
-        ctx.clearRect(0, 0, c.width, c.height);
-        //drawing
-        ctx.save();
-        ctx.beginPath();
-        for (i = 0; i < 199; i++) {
-          ctx.setTransform(1, 0, 0, 1, 0, 0);
-          var yoff = 0.25 * c.height * Math.cos(progress / 14 + i / 16);
-          ctx.translate( - 100 + 14 * i, c.height / 2 + yoff);
-          ctx.rotate(2 + progress / 30 + 0.1 * Math.sin(i / 20 + progress / 10.0));
-          var scaleX = 1 + 0.8 * Math.sin(i / 8);
-          var scaleY = 1 + 0.8 * Math.sin((i + progress) / 50);
-          var t = i / 100.0;
-          ctx.scale(scaleX, scaleY);
-          drawstar();
-        }
-        ctx.restore();
-        ctx.stroke();
-        window.requestAnimationFrame(step);
-      }
-      window.requestAnimationFrame(step);</script>
-    <title>2048 Game - SmellBoy</title>
-    <link href="./main.css" rel="stylesheet" type="text/css" />
-    <link href="./flag-icon.css" rel="stylesheet" type="text/css" />
-    <style>.score-container:after { content: "Score"; } .best-container:after { content: "Best"; }</style>
-    <meta property="og:image" content="/meta/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui" />
-    <div class="mobile-top"></div>
     <div class="container">
-      <div class="heading">
-        <h1 class="title">
-          <a href="https://smellboy.github.io/">2048</a></h1>
-        <div class="scores-container">
-          <div class="score-container">2020
-            <div class="score-addition">+4</div></div>
-          <div class="best-container">18004</div></div>
-      </div>
-      <div class="game-intro">
-        <a class="restart-button">New Game</a>
-        <h2 class="subtitle">Play
-          <strong>2048 Game</strong>Online</h2>
-        <div class="above-game">
-          <p>通过上下左右控制格子移动</p>
-          <p>
-            <strong>先定一个小目标比如说2048!</strong></p>
-        </div>
-      </div>
-      <div class="game-container">
-        <div class="game-message">
-          <p>
-          </p>
-          <div class="lower">
-            <a class="keep-playing-button">Keep playing</a>
-            <a class="retry-button">Try again</a>
-            <div class="score-sharing"></div>
-          </div>
-        </div>
-        <div class="grid-container">
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-          </div>
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-          </div>
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-          </div>
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-          </div>
-        </div>
-        <div class="tile-container">
-          <div class="tile tile-2 tile-position-1-1 tile-new">
-            <div class="tile-inner">2</div></div>
-          <div class="tile tile-2 tile-position-1-2">
-            <div class="tile-inner">2</div></div>
-          <div class="tile tile-2 tile-position-1-2">
-            <div class="tile-inner">2</div></div>
-          <div class="tile tile-4 tile-position-1-2 tile-merged">
-            <div class="tile-inner">4</div></div>
-          <div class="tile tile-2 tile-position-1-3">
-            <div class="tile-inner">2</div></div>
-          <div class="tile tile-16 tile-position-1-4">
-            <div class="tile-inner">16</div></div>
-          <div class="tile tile-8 tile-position-2-2">
-            <div class="tile-inner">8</div></div>
-          <div class="tile tile-4 tile-position-2-3">
-            <div class="tile-inner">4</div></div>
-          <div class="tile tile-256 tile-position-2-4">
-            <div class="tile-inner">256</div></div>
-          <div class="tile tile-16 tile-position-3-3">
-            <div class="tile-inner">16</div></div>
-          <div class="tile tile-32 tile-position-3-4">
-            <div class="tile-inner">32</div></div>
-          <div class="tile tile-8 tile-position-4-3">
-            <div class="tile-inner">8</div></div>
-          <div class="tile tile-2 tile-position-4-4">
-            <div class="tile-inner">2</div></div>
-        </div>
-      </div>
-      <script src="./all.js"></script>
-      <br /></div>
-    <div style="width:50%; margin:0 auto; text-align:center;">
-      <p>
-        <strong>点击图片关注微信公众号</strong></p>
-      <img src="SmellBoy.github.io/weixin.jpg" style="max-width:50%;overflow:hidden;" /></div>
-    <div style="width:50%; margin:0 auto; text-align:center;">
-      <p>
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+       <p>
         <strong>点击图片进入小程序</strong></p>
-      <img src="smart_app.jpg" style="max-width:50%;overflow:hidden;" /></div>
-    <div style="width:50%; margin:0 auto; text-align:center;">
-      <p>
-        <strong>赞赏</strong></p>
-      <img src="vote.png" style="max-width:50%;overflow:hidden;" /></div>
-    <br />
-    <br />
+      <img src="http://pic168.nipic.com/file/20180607/8952533_190225680000_2.jpg" style="max-width:50%;overflow:hidden;" />
 
-    <br />
-    <br />
-    <div style="width:300px; margin:0 auto; text-align:center;">
-      <p>
-        <strong>3：数据咨询行情</strong></p>
-      <a style="color:gold;" href="https://psy-data.github.io/">大数据发布 psy-data</a>
-      <p>
-        <a style="color:gold;" href="http://brucezhaor.github.io/">数据大神 brucezhaor</a></p>
-      <p>
-        <a style="color:gold;" href="heart_rate.html">心率波形 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="wheel.html">转速视觉 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="web_crawler.html">贴吧爬虫 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="charts_reports.html">统计报表 jarnar</a></p>
-      <p>
-        <a style="color:gold;" href="动态展示.html">动态展示 jarnar</a></p>
+      <ul class="nav nav-tabs">
+        <li class="active">
+           <a href="#">首页</a>
+        </li>
+        <li>
+           <a href="#">简介</a>
+        </li>
+        <li class="disabled">
+           <a href="#">信息</a>
+        </li>
+        <li class="dropdown pull-right">
+           <a href="#" data-toggle="dropdown" class="dropdown-toggle">下拉<strong class="caret"></strong></a>
+          <ul class="dropdown-menu">
+            <li>
+               <a href="#">操作</a>
+            </li>
+            <li>
+               <a href="#">设置栏目</a>
+            </li>
+            <li>
+               <a href="#">更多设置</a>
+            </li>
+            <li class="divider">
+            </li>
+            <li>
+               <a href="#">分割线</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <br />
-    <div style="width:300px; margin:0 auto; text-align:center;">
-      <p>
-        <strong>4：拓展阅读</strong></p>
-      <a style="color:gold;" href="https://zhuanlan.zhihu.com/p/21816110">【量化心得】</a>
-      <section class="entry-content ng-binding ng-scope" ng-bind-html="postContentTrustedHtml" ui-copyright-check="" data-entry-url="/p/21816110" data-author-name="江南" ng-if="ownPost(post) || !isCensoring">
-        <p>此开卷第一回也，下回不知有没有，这回是有的。</p>
-        <h2>1 打三日鱼晒两天网，欲速则不达​。</h2>
-        <p>​ 鱼要长大，网要休息。在时间上，晒网的时间要长于打鱼的时间。如果打鱼周期是三天，第一天打鱼，接下来两天晒网。</p>
-        <p>不要担心休息的时间长，会错失很多机会。往往机会并不是越多越好，而是准备得越充分越好。万事俱备只欠东风，这个东风就是时机。真真的机会，不是随便吹的东西南北风。
-          <br /></p>
-        <h2>2 做低频交易，稳定容易把握。</h2>
-        <p>风险控制不到位的情况下，交易频率越高，失误也就越多。无风也有三尺浪，市场上充满着噪声。需要我们练就身处闹市，心在老林的心态去面对市场的熙熙攘攘。</p>
-        <p>对于低频交易有天然的优势，那就是 低成本 低风险。低频捕鱼，鱼可以尽情的长大。长线钓鱼，鱼可以尽情地游。海阔凭鱼跃，天高任鸟飞。​</p>
-        <p>2016-08-01​</p>
-      </section>
+  </div>
+  <div class="row clearfix">
+    <div class="col-md-4 column">
+      <img alt="140x140" src="v3/default3.jpg" />
     </div>
-    <div class="fb-line">
-      <script>!
-        function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0],
-          p = /^http:/.test(d.location) ? 'http': 'https';
-          if (!d.getElementById(id)) {
-            js = d.createElement(s);
-            js.id = id;
-            js.src = p + '://platform.twitter.com/widgets.js';
-            fjs.parentNode.insertBefore(js, fjs);
-          }
-        } (document, 'script', 'twitter-wjs');</script>
-      <div class="twitter-button-wrapper">
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20one%20of%20the%20most%20addictive%20games%20of%20all%20time%20-%202048!" target="_blank" data-size="default">Tweet</a></div>
-      <a target="_blank" class="facebook-share-button" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//2048game.com">Facebook</a>
-      <div class="clear"></div>
+    <div class="col-md-4 column">
+      <div class="media">
+         <a href="#" class="pull-left"><img src="v3/default7.jpg" class="media-object" alt='' /></a>
+        <div class="media-body">
+          <h4 class="media-heading">
+            Nested media heading
+          </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+          <div class="media">
+             <a href="#" class="pull-left"><img src="v3/default8.jpg" class="media-object" alt='' /></a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                Nested media heading
+              </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="col-md-4 column">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+              编号
+            </th>
+            <th>
+              产品
+            </th>
+            <th>
+              交付时间
+            </th>
+            <th>
+              状态
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              TB - Monthly
+            </td>
+            <td>
+              01/04/2012
+            </td>
+            <td>
+              Default
+            </td>
+          </tr>
+          <tr class="success">
+            <td>
+              1
+            </td>
+            <td>
+              TB - Monthly
+            </td>
+            <td>
+              01/04/2012
+            </td>
+            <td>
+              Approved
+            </td>
+          </tr>
+          <tr class="error">
+            <td>
+              2
+            </td>
+            <td>
+              TB - Monthly
+            </td>
+            <td>
+              02/04/2012
+            </td>
+            <td>
+              Declined
+            </td>
+          </tr>
+          <tr class="warning">
+            <td>
+              3
+            </td>
+            <td>
+              TB - Monthly
+            </td>
+            <td>
+              03/04/2012
+            </td>
+            <td>
+              Pending
+            </td>
+          </tr>
+          <tr class="info">
+            <td>
+              4
+            </td>
+            <td>
+              TB - Monthly
+            </td>
+            <td>
+              04/04/2012
+            </td>
+            <td>
+              Call in to confirm
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
   </body>
 
 </html>
