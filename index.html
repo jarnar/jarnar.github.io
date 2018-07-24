@@ -14,6 +14,62 @@
 
     <!-- <img src="http://pic172.nipic.com/file/20180717/20020614_091834556035_2.jpg" style="max-width:100%;overflow:hidden;" /> -->
     <!-- <img src="http://pic168.nipic.com/file/20180607/8952533_190225680000_2.jpg"  -->
+
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      img{
+        width:200px;
+        height: 300px;
+      }
+      body{ background-color: #313131; }
+      @keyframes fn{
+        0% {transform:rotateX(-15deg) rotateY(0deg);}
+          100%{transform:rotateX(-15deg) rotateY(360deg);}
+
+      }
+      @-moz-keyframes fn{
+        0% {transform:rotateX(-15deg) rotateY(0deg);}
+          100%{transform:rotateX(-15deg) rotateY(360deg);}
+      }
+      @-ms-keyframes fn{
+        0% {transform:rotateX(-15deg) rotateY(0deg);}
+          100%{transform:rotateX(-15deg) rotateY(360deg);}
+      }
+      @-webkit-keyframes fn{
+        0% {transform:rotateX(-15deg) rotateY(0deg);}
+          100%{transform:rotateX(-15deg) rotateY(360deg);}
+      }
+      .box{       
+          width:200px;
+              height:300px;
+              position:relative;
+              margin:auto;
+              margin-top:150px;
+              transform-style:preserve-3d;
+              transform:rotateX(-10deg);
+              animation: fn 10s;
+              animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          position: relative
+      }
+      .box:hover{
+        animation-play-state: paused;
+      }
+      .box>div{
+        width:200px;
+        height:300px;
+        position: absolute;
+        left:0;
+        top:0;
+        
+      }
+    </style>
+
+
+
 <style>
 body {
   background-color: #f3f5f7;
@@ -354,6 +410,51 @@ body {
   </div>
 </div>
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="box">
+      <div style="transform: rotateY(0deg) translateZ(275px);">
+        <img src="img/smart_app.jpg" >
+      </div>
+      <div style="transform: rotateY(40deg) translateZ(275px);">
+        <img src="img/vote.png">
+      </div>
+      <div style="transform: rotateY(80deg) translateZ(275px);">
+        <img src="img/smart_app_head.png">
+      </div>
+      <div style="transform: rotateY(120deg) translateZ(275px);">
+        <img src="img/smart_app.jpg">
+      </div>
+      <div style="transform: rotateY(160deg) translateZ(275px);">
+        <img src="img/vote.png">
+      </div>
+      <div style="transform: rotateY(200deg) translateZ(275px);">
+        <img src="img/smart_app_head.png">
+      </div>
+      <div style="transform: rotateY(240deg) translateZ(275px);">
+        <img src="img/smart_app.jpg">
+      </div>
+      <div style="transform: rotateY(280deg) translateZ(275px);">
+        <img src="img/vote.png">
+      </div>
+      <div style="transform: rotateY(320deg) translateZ(275px);">
+        <img src="img/smart_app_head.png" >
+      </div>          
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <br/>
     <br/>
 
