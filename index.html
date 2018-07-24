@@ -4,7 +4,10 @@
   
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="shortcut icon" href="/smart_app_head_favicon.ico" />
+    <link rel="shortcut icon" href="img/smart_app_head_favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="css/nstyle.css" />
+
     <title>小数据顾问-实验室</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
@@ -68,7 +71,20 @@
       }
     </style>
 
+<style>
+.strength{padding-top:60px;}
+.strengthMain{height:;overflow:hidden;}
+.strengthMain li{float:left;width:600px;height:330px;overflow:hidden;background:#000;position:relative;}
+.strengthMain li img{width:600px;height:330px;transition:all .5s;opacity:0.4;filter:alpha(opacity=40);}
+.strengthMain li .font{width:600px;height:205px;top:0;left:0;position:absolute;color:#fff;text-align:center;font-size:16px;padding-top:125px;}
+.strengthMain li .font h3{font-size:36px;color:#fff;font-weight:normal;margin-bottom:20px;line-height:36px;}
+.strengthMain li:hover img{transform: scale(1.05, 1.05);}
+.strengthMain li .font::before,.strengthMain li .font::after{position:absolute;content:'';opacity:0;transition:all 0.5s;}
+.strengthMain li .font::before{top:25px;right:15px;bottom:25px;left:15px;border-top:1px solid #fff;border-bottom:1px solid #fff;transform:scale(0,1);-webkit-transform-origin:0 0;transform-origin:0 0}
+.strengthMain li .font::after{top:15px;right:25px;bottom:15px;left:25px;border-right:1px solid #fff;border-left:1px solid #fff;transform:scale(1,0);transform-origin:100% 0;}
+.strengthMain li:hover .font::before,.strengthMain li:hover .font::after{opacity:1;transform:scale(1);transition: all 0.5s;}
 
+    </style>
 
 <style>
 body {
@@ -216,7 +232,7 @@ body {
               <li data-slide-to="1" data-target="#carousel-111189"></li>
               <li data-slide-to="2" data-target="#carousel-111189" class="active"></li>
             </ol>
-            <div class="carousel-inner">
+            <div class="carousel-inner strengthMain">
               <div class="item">
                 <img alt="" src="RESULTTEAMGO_2017.png" />
                 <div class="carousel-caption">
